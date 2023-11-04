@@ -1,5 +1,5 @@
 arr1 = [1, 2, 3, 4, 5];
-val = 2;
+val = 4;
 count = 0;
 var reduceLength = false;
 
