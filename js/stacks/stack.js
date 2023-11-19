@@ -37,13 +37,15 @@ class Stack {
 
 let stack = new Stack();
 
-console.log(stack.isEmpty());
-stack.push(10);
-stack.push(20);
-stack.push(30);
-stack.push(40);
-stack.push(50);
-stack.pop();
-stack.printStack();
-console.log(stack.isEmpty());
-console.log(stack.top());
+// console.log(stack.isEmpty());
+// stack.push(10);
+// stack.push(20);
+// stack.push(30);
+// stack.push(40);
+// stack.push(50);
+// stack.pop();
+// stack.printStack();
+// console.log(stack.isEmpty());
+// console.log(stack.top());
+
+module.exports = Stack;
