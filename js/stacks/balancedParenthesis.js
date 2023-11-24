@@ -21,4 +21,4 @@ function balancedParenthesis(str1) {
   return stack.isEmpty();
 }
 
-console.log(balancedParenthesis("(){{[[]}}"));
+console.log(balancedParenthesis("(){{[[]]}}"));
