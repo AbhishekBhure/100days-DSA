@@ -33,9 +33,17 @@ class Stack {
 
     console.log(str);
   }
+
+  getStackString() {
+    let str = "";
+    for (let i = 0; i < this.items.length; i++) {
+      str += this.items[i] + ",";
+    }
+    return str;
+  }
 }
 
-let stack = new Stack();
+// let stack = new Stack();
 
 // console.log(stack.isEmpty());
 // stack.push(10);
