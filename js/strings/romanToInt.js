@@ -33,4 +33,4 @@ function romanToInt(s) {
   return res;
 }
 
-console.log(romanToInt("X"));
+console.log(romanToInt("III"));
