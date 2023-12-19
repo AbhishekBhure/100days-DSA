@@ -117,5 +117,6 @@ g.addEdge(1, 2);
 g.addEdge(2, 3);
 
 g.addEdge(3, 4);
+g.print();
 
-bfs(g, 1);
+// bfs(g, 1);

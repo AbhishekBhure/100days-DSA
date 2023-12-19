@@ -24,6 +24,33 @@ class LinkedList {
     this.length++;
   }
 
+  insertAnyWhere(data, index) {
+    if (index > this.length) {
+      console.log("OverFlow");
+    } else {
+      if (index === 0) {
+        this.insertAtBeginning(data);
+      } else {
+        let i = 0;
+        let holder = this.head;
+
+        while (i < index - 1) {
+          holder = holder.next;
+          i++;
+        }
+
+        let newNode = new Node(data, holder.next);
+        holder.next = newNode;
+
+        // If inserting at the end, update the tail
+        if (newNode.next === null) {
+          this.tail = newNode;
+        }
+        this.length++;
+      }
+    }
+  }
+
   insertAtBeginning(data) {
     let node = new Node(data);
     if (this.head === null) {
@@ -73,6 +100,18 @@ class LinkedList {
     }
   }
 
+  getMid() {
+    let slow = this.head;
+    let fast = this.head;
+
+    while (fast != null && fast.next != null) {
+      fast = fast.next.next;
+      slow = slow.next;
+    }
+
+    return slow.data;
+  }
+
   print() {
     let temp = this.head;
     let str = "";
@@ -85,11 +124,15 @@ class LinkedList {
   }
 }
 
-// let list = new LinkedList();
-// list.insertAtEnd(1);
-// list.insertAtEnd(2);
-// list.insertAtEnd(3);
-// list.print();
+let list = new LinkedList();
+list.insertAtEnd(1);
+list.insertAtEnd(2);
+list.insertAtEnd(3);
+list.insertAtEnd(0);
+list.print();
+// console.log(list.getAt(1));
+console.log(list.getMid());
+
 // list.deleteAtEnd();
 // list.print();
 // list.insertAtBeginning(0);

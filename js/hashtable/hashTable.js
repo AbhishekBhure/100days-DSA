@@ -54,10 +54,12 @@ class Hashtabble {
   }
 }
 
-let hash = new Hashtabble(5);
-hash.add(1);
-hash.add(2);
-hash.add(4);
-hash.add(8);
-hash.add(12);
-hash.print();
+module.exports = Hashtabble;
+
+// let hash = new Hashtabble(5);
+// hash.add(1);
+// hash.add(2);
+// hash.add(4);
+// hash.add(8);
+// hash.add(12);
+// hash.print();

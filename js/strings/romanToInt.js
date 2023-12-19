@@ -7,14 +7,14 @@ symbols = {
   D: 500,
   M: 1000,
 };
-function romanToInt(s) {
-  value = 0;
-  for (let i = 0; i < s.length - 1; i += 1) {
-    symbols[s[i]] < symbols[s[i + 1]]
-      ? (value -= symbols[s[i]])
-      : (value += symbols[s[i]]);
-  }
-  return value + symbols[s[s.length - 1]];
-}
+// function romanToInt(s) {
+//   value = 0;
+//   for (let i = 0; i < s.length - 1; i += 1) {
+//     symbols[s[i]] < symbols[s[i + 1]]
+//       ? (value -= symbols[s[i]])
+//       : (value += symbols[s[i]]);
+//   }
+//   return value + symbols[s[s.length - 1]];
+// }
 
 console.log(romanToInt("III"));
