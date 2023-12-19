@@ -22,26 +22,42 @@
 //   }
 // };
 
-//two pointers
-function twoSum(arr, target) {
-  let left = 0;
-  let right = arr.length - 1;
+//two pointers this is best when the arr is sorted
+// function twoSum(arr, target) {
+//   let left = 0;
+//   let right = arr.length - 1;
 
-  while (left < right) {
-    let sum = arr[left] + arr[right];
+//   while (left < right) {
+//     let sum = arr[left] + arr[right];
 
-    if (sum > target) {
-      right--;
-    } else if (sum < target) {
-      left++;
+//     if (sum > target) {
+//       right--;
+//     } else if (sum < target) {
+//       left++;
+//     } else {
+//       return [left, right];
+//     }
+//   }
+//   return [-1, -1];
+
+//   console.log("left", left);
+//   console.log("right", right);
+// }
+
+//O(n) using obj/map
+function twoSum(nums, target) {
+  let bValues = {};
+
+  for (let i = 0; i < nums.length; i++) {
+    let a = nums[i];
+    let b = target - a;
+
+    if (bValues[a] === undefined) {
+      bValues[b] = i;
     } else {
-      return [left, right];
+      return [bValues[a], i];
     }
   }
-  return [-1, -1];
-
-  console.log("left", left);
-  console.log("right", right);
 }
 
 console.log(twoSum([1, 2, 3, 8, 9, 20], 12));
